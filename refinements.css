@@ -1,0 +1,211 @@
+/* COLORA JD — typography + PDF spacing refinements
+   Loaded after luxury.css. Keep Vietnamese UI copy on Open Sans and compact the PDF masthead. */
+
+:root {
+  --open-sans: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/* ===== EDITOR / APP UI =====
+   Open Sans has full Vietnamese coverage, so every editable/control surface uses it.
+*/
+body,
+button,
+input,
+textarea,
+select,
+.editor-panel,
+.editor-panel *,
+.modal-card,
+.modal-card *,
+.brand-slogan,
+.brand-kicker,
+.role-count,
+.role-item-title,
+.role-item-meta,
+.eyebrow,
+.topbar-subtitle,
+.seg-btn,
+.toolbar-note,
+.autosave,
+.btn,
+.preview-label,
+.topbar h1 {
+  font-family: var(--open-sans) !important;
+}
+
+/* Keep a single, predictable hierarchy inside the editing column. */
+.form-card h3 {
+  margin: 0 0 9px;
+  font-family: var(--open-sans) !important;
+  font-size: 14.5px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  color: var(--navy);
+}
+
+.field label {
+  font-family: var(--open-sans) !important;
+  font-size: 8px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: .085em;
+}
+
+.field input,
+.field textarea,
+.field select,
+.group-head input,
+.group-card textarea {
+  font-family: var(--open-sans) !important;
+  font-size: 11.5px !important;
+  line-height: 1.5 !important;
+  font-weight: 400;
+  letter-spacing: 0 !important;
+}
+
+.group-head input {
+  font-weight: 500;
+}
+
+.weight-input {
+  font-weight: 600 !important;
+}
+
+.help,
+.mini-btn,
+.add-row-btn {
+  font-family: var(--open-sans) !important;
+}
+
+/* ===== PDF / LIVE PREVIEW =====
+   Reduce the oversized masthead while retaining the luxury editorial identity.
+*/
+.jd-topband {
+  min-height: 46mm;
+  padding: 7.5mm 14mm 7mm;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.jd-topband::before {
+  background:
+    linear-gradient(90deg, rgba(176,138,91,.36) 0 1px, transparent 1px) 14mm 7.5mm / 1px calc(100% - 14.5mm) no-repeat;
+}
+
+.jd-topband::after {
+  right: -5mm;
+  top: -4mm;
+  width: 54mm;
+  height: 54mm;
+  opacity: .065;
+}
+
+.jd-title-wrap {
+  max-width: 145mm;
+  padding-left: 6mm;
+  align-self: flex-end;
+}
+
+.jd-logo-wrap {
+  position: absolute;
+  top: 6mm;
+  right: 13mm;
+  width: 29mm;
+  height: 15mm;
+  align-self: auto;
+}
+
+.jd-doc-label {
+  margin-bottom: 2mm;
+  font-size: 6.1px;
+  letter-spacing: .22em;
+}
+
+.jd-title {
+  max-width: 132mm;
+  font-size: 27px;
+  line-height: 1.04;
+}
+
+.jd-tagline {
+  margin-top: 2.4mm;
+  font-size: 6px;
+  letter-spacing: .215em;
+}
+
+.jd-body {
+  padding-top: 8mm;
+}
+
+.jd-meta-grid {
+  margin-bottom: 6mm;
+}
+
+/* Vietnamese narrative copy: use Open Sans to avoid fallback/diacritic mismatches. */
+.jd-intro,
+.jd-copy,
+.jd-brand-story,
+.jd-list li,
+.jd-meta-label,
+.jd-meta-value,
+.jd-subhead strong,
+.jd-weight,
+.jd-footer,
+.jd-footer strong {
+  font-family: var(--open-sans) !important;
+}
+
+.jd-intro {
+  margin-bottom: 7mm;
+  font-size: 10px;
+  line-height: 1.72;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* Keep display serif only for short editorial headings that are normally English. */
+.jd-section-title,
+.jd-callout-title,
+.jd-title {
+  font-family: var(--editorial-serif);
+}
+
+@media (max-width: 820px) {
+  .jd-topband {
+    min-height: 42mm;
+    padding: 7mm 9mm 6.5mm;
+  }
+
+  .jd-title-wrap {
+    padding-left: 4mm;
+  }
+
+  .jd-logo-wrap {
+    top: 5mm;
+    right: 8mm;
+    width: 26mm;
+    height: 13mm;
+  }
+
+  .jd-title {
+    font-size: 23px;
+  }
+
+  .jd-body {
+    padding-top: 7mm;
+  }
+}
+
+@media print {
+  .jd-topband {
+    min-height: 46mm !important;
+    padding: 7.5mm 14mm 7mm !important;
+  }
+
+  .jd-logo-wrap {
+    position: absolute !important;
+    top: 6mm !important;
+    right: 13mm !important;
+  }
+}
