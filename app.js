@@ -3,9 +3,9 @@ const SETTINGS_KEY = 'colora_jd_settings_v1';
 
 const BRAND_DEFAULTS = {
   companyName: 'COLORA',
-  tagline: 'COLORA YOUR AURA',
-  brandStory: 'COLORA là sự kết hợp giữa COLOR - màu sắc, hành động tô vẽ - và AURA - khí chất, năng lượng, bản sắc cá nhân. Mỗi người có một màu sắc và khí chất riêng; COLORA tồn tại để giúp họ thể hiện màu sắc ấy theo cách riêng của mình.',
-  hiringPromise: 'Nhiều ownership hơn - trải nghiệm rộng hơn — tốc độ học nhanh hơn. Là một thương hiệu D2C đang phát triển, mỗi vai trò tại COLORA có phạm vi rộng và cơ hội tiếp xúc với nhiều phần của doanh nghiệp. Bạn không cần biết mọi thứ từ ngày đầu; chúng tôi coi trọng khả năng học hỏi, sự chủ động và tiềm năng phát triển.',
+  tagline: 'COLORA - COLOR YOUR AURA',
+  brandStory: 'COLORA là sự kết hợp giữa COLOR — màu sắc, hành động tô vẽ — và AURA — khí chất, năng lượng, bản sắc cá nhân. Mỗi người có một màu sắc và khí chất riêng; COLORA tồn tại để giúp họ thể hiện màu sắc ấy theo cách riêng của mình.',
+  hiringPromise: 'Nhiều ownership hơn — trải nghiệm rộng hơn — tốc độ học nhanh hơn. Là một thương hiệu D2C đang phát triển, mỗi vai trò tại COLORA có phạm vi rộng và cơ hội tiếp xúc với nhiều phần của doanh nghiệp. Bạn không cần biết mọi thứ từ ngày đầu; chúng tôi coi trọng khả năng học hỏi, sự chủ động và tiềm năng phát triển.',
   location: 'Việt Nam',
   workMode: 'On-site / Hybrid tùy vị trí',
   employmentType: 'Full-time',
@@ -100,27 +100,29 @@ const seedRoles = [
     id: crypto.randomUUID(),
     title: 'Customer Experience Executive',
     department: 'Customer Experience / E-commerce',
-    reportsTo: 'Operations / E-commerce Manager hoặc Founder',
-    level: 'Junior / Middle',
+    reportsTo: 'Founder / E-commerce & Operations Lead',
+    level: 'Junior / Junior–Middle',
     location: '', employmentType: '',
-    summary: 'Customer Experience Executive là người đại diện trực tiếp cho COLORA trong các cuộc trò chuyện với khách hàng. Mục tiêu không chỉ là trả lời inbox mà là giúp khách hiểu sản phẩm → lựa chọn đúng → tự tin mua → nhận sản phẩm tốt → quay lại mua lần tiếp theo. Vai trò kết hợp Customer Service + Sales + CRM + After-sales + Customer Insights.',
+    summary: 'Customer Experience Executive là người đại diện trực tiếp cho COLORA trong toàn bộ hành trình sau khi khách bắt đầu tương tác với thương hiệu. Trong một team D2C nhỏ, vai trò này không dừng ở “trả lời inbox”: nhân sự sẽ kết hợp Customer Service + Online Sales + Order Support + After-sales + CRM + Voice of Customer để giúp khách hiểu sản phẩm, chọn đúng, mua tự tin, được chăm sóc tốt và muốn quay lại. Phạm vi công việc rộng hơn doanh nghiệp lớn, nhưng đổi lại nhân sự được training sâu về sản phẩm, trang sức, customer journey và có nhiều room để thử sức, phát triển ownership.',
     responsibilities: [
-      { title: 'Customer Service', weight: '30%', bullets: ['Quản lý inquiry từ website, Facebook, Instagram, TikTok, email và các kênh liên hệ được triển khai.', 'Giải đáp product, gemstone, material, ring size, delivery, payment, exchange, warranty và care.'] },
-      { title: 'Online Sales / Jewelry Advisor', weight: '25%', bullets: ['Tư vấn sản phẩm, màu đá, size, gifting, collection và styling theo nhu cầu thực.', 'Cross-sell hợp lý theo consultative selling, không hard-sell.'] },
-      { title: 'Order Management', weight: '15%', bullets: ['Theo dõi Order → Payment → Fulfillment → Delivery.', 'Xử lý đổi địa chỉ, đổi size, cancellation, failed delivery và phối hợp Operations.'] },
-      { title: 'Warranty & After-sales', weight: '10%', bullets: ['Tiếp nhận exchange, return, warranty, repair, resize và product issue.', 'Theo dõi case từ lúc mở đến lúc hoàn tất, đảm bảo communication rõ ràng.'] },
-      { title: 'CRM', weight: '10%', bullets: ['Cập nhật customer information, purchase history, preferences, notes và special requests.', 'Hỗ trợ birthday, VIP, post-purchase, review request và reactivation khi cần.'] },
-      { title: 'Voice of Customer', weight: '10%', bullets: ['Tổng hợp câu hỏi, objection, complaint và insight khách hàng hàng tuần.', 'Feedback trở lại Product → Marketing → Website → Operations để cải thiện customer journey.'] }
+      { title: 'Customer Service & Omnichannel Support', weight: '25%', bullets: ['Tiếp nhận và phản hồi khách hàng qua website, Facebook, Instagram, TikTok, email, Zalo/hotline hoặc các kênh được COLORA triển khai.', 'Giải đáp rõ ràng về sản phẩm, chất liệu, đá màu, size nhẫn, cách bảo quản, giao hàng, thanh toán, đổi trả và bảo hành.', 'Duy trì tone of voice lịch sự, tinh tế, gần gũi và nhất quán với trải nghiệm premium của COLORA.', 'Chủ động theo dõi các case chưa hoàn tất thay vì chờ khách liên hệ lại.'] },
+      { title: 'Online Sales / Jewelry Advisor', weight: '20%', bullets: ['Tìm hiểu nhu cầu, dịp sử dụng, ngân sách, màu sắc và phong cách để tư vấn sản phẩm phù hợp.', 'Hỗ trợ chọn ring size, gemstone color, gifting, phối trang sức và collection phù hợp.', 'Thực hiện consultative selling, cross-sell / upsell có chọn lọc nhưng không hard-sell hoặc tạo áp lực mua.', 'Theo dõi khách có purchase intent cao và hỗ trợ hoàn tất đơn hàng khi cần.'] },
+      { title: 'Order & Delivery Coordination', weight: '15%', bullets: ['Theo dõi hành trình Order → Payment → Fulfillment → Shipping → Delivery và cập nhật khách khi có phát sinh.', 'Hỗ trợ thay đổi thông tin đơn, địa chỉ, size, sản phẩm, hủy đơn hoặc xử lý failed delivery theo chính sách.', 'Phối hợp chặt với E-commerce & Operations để giảm order error và đảm bảo trải nghiệm liền mạch.'] },
+      { title: 'Warranty, Returns & After-sales', weight: '15%', bullets: ['Tiếp nhận và quản lý exchange, return, warranty, repair, resize và product issue.', 'Ghi nhận đầy đủ tình trạng sản phẩm, hình ảnh, timeline và phương án xử lý trước khi bàn giao nội bộ / nhà cung cấp.', 'Theo dõi case từ lúc mở tới khi đóng; cập nhật khách chủ động và rõ ràng trong toàn bộ quá trình.', 'Biến service recovery thành cơ hội khôi phục niềm tin và giữ quan hệ lâu dài với khách hàng.'] },
+      { title: 'CRM & Customer Relationship', weight: '10%', bullets: ['Cập nhật đúng customer profile, purchase history, preferences, size, màu yêu thích, notes và special requests trên CRM.', 'Hỗ trợ các flow post-purchase, review request, birthday, VIP, reactivation và các hoạt động retention khi được triển khai.', 'Nhận diện khách hàng trung thành / high-potential và đề xuất follow-up phù hợp.'] },
+      { title: 'Voice of Customer & Cross-functional Support', weight: '10%', bullets: ['Tổng hợp định kỳ câu hỏi phổ biến, objection, complaint, lý do chưa mua, yêu cầu sản phẩm và insight từ hội thoại thật.', 'Chuyển insight về Product, Marketing, Website và Operations để cải thiện nội dung, PDP, chính sách và customer journey.', 'Hỗ trợ kiểm tra customer-facing touchpoints hoặc campaign/service script khi cần trong team nhỏ.'] },
+      { title: 'Knowledge Base & Process Improvement', weight: '5%', bullets: ['Góp phần xây FAQ, response template, product knowledge base, care guide và SOP CX.', 'Đề xuất cải tiến quy trình dựa trên lỗi lặp lại, phản hồi của khách và dữ liệu service thực tế.'] }
     ],
-    mustHave: ['Communication và viết tiếng Việt tốt.', 'Kiên nhẫn, detail-oriented, customer-first và giải quyết vấn đề tốt.', 'Học sản phẩm nhanh, sử dụng computer / CRM tốt và xử lý nhiều case đồng thời.'],
-    niceToHave: ['Từng làm fashion, beauty, jewelry, lifestyle, retail, hospitality hoặc premium service.', 'Tiếng Anh tốt là lợi thế.'],
+    mustHave: ['Giao tiếp và viết tiếng Việt tốt; diễn đạt rõ ràng, lịch sự và có cảm nhận về tone of voice thương hiệu.', 'Kiên nhẫn, tinh tế, có empathy nhưng vẫn giữ được tư duy giải quyết vấn đề và nguyên tắc vận hành.', 'Detail-oriented; có khả năng theo dõi nhiều case song song mà không bỏ sót follow-up.', 'Học sản phẩm nhanh và sẵn sàng học kiến thức về jewelry, gemstone, sizing, care và after-sales.', 'Thoải mái với môi trường startup: chủ động, linh hoạt, biết ưu tiên và phối hợp cross-functional.', 'Có khả năng sử dụng Google Workspace / Excel hoặc công cụ CRM, inbox và order management ở mức cơ bản.'],
+    niceToHave: ['Đã có kinh nghiệm customer service, online sales hoặc retail trong jewelry, fashion, beauty, lifestyle, hospitality hay premium service.', 'Có kinh nghiệm xử lý đơn hàng e-commerce, CRM, social inbox hoặc after-sales.', 'Tiếng Anh giao tiếp / viết tốt là lợi thế.', 'Có tư duy commercial và hứng thú với styling, gifting hoặc tư vấn sản phẩm.'],
     kpis: [
-      { title: 'Service', bullets: ['First Response Time', 'Average Resolution Time', 'CSAT'] },
-      { title: 'Commercial', bullets: ['Chat → Order Conversion', 'Assisted Revenue', 'AOV'] },
-      { title: 'Customer & Operations', bullets: ['Review score / complaint resolution', 'Case accuracy', 'Order error / SLA compliance'] }
+      { title: 'Service Quality', bullets: ['First Response Time & SLA adherence', 'Average Resolution Time', 'CSAT / customer feedback quality', 'Follow-up completion rate'] },
+      { title: 'Commercial Contribution', bullets: ['Chat / consultation → Order Conversion', 'Assisted Revenue', 'AOV / cross-sell contribution when relevant'] },
+      { title: 'After-sales & Accuracy', bullets: ['Case accuracy', 'Order / service error rate', 'Complaint resolution quality', 'Warranty / return case turnaround'] },
+      { title: 'Customer Intelligence', bullets: ['Quality and consistency of Voice of Customer reporting', 'Useful insights translated into process / content improvements'] }
     ],
-    development: 'Có thể phát triển thành Senior CX Executive → Customer Experience Lead / CRM Executive / Online Sales Lead tùy thế mạnh. Đây cũng là vị trí có lợi thế lớn để hiểu customer journey và product insight.',
-    whatYouGet: 'Được đào tạo về product knowledge, jewelry consulting, CRM và customer journey. Nhân sự có cơ hội tạo ra quy trình CX từ sớm thay vì chỉ vận hành script có sẵn.',
+    development: 'Được training về COLORA product knowledge, jewelry consulting, customer communication, CRM, e-commerce operations và customer journey. Tùy thế mạnh, lộ trình có thể phát triển thành Senior Customer Experience Executive → Customer Experience Lead, CRM / Retention Executive, Online Sales Lead hoặc E-commerce Operations. Khi team mở rộng, strong performers có thể tham gia xây SOP, onboarding và training thành viên mới.',
+    whatYouGet: 'Bạn không bị giới hạn trong một script CSKH hẹp. Bạn được tiếp xúc trực tiếp với khách hàng, sản phẩm, website, CRM, vận hành đơn hàng và after-sales; được guidance trong những mảng chưa có kinh nghiệm và có quyền đề xuất cách COLORA nên phục vụ khách tốt hơn. Đây là vị trí có learning curve nhanh, nhiều room to experience and develop và ownership sẽ tăng theo năng lực.',
     updatedAt: new Date().toISOString()
   },
   {
@@ -153,6 +155,7 @@ const seedRoles = [
 
 let roles = loadJSON(STORAGE_KEY, seedRoles);
 let settings = loadJSON(SETTINGS_KEY, BRAND_DEFAULTS);
+applyMigrations();
 let activeId = roles[0]?.id || null;
 let editMode = 'edit';
 let saveTimer = null;
@@ -168,13 +171,44 @@ function loadJSON(key, fallback) {
   try { const raw = localStorage.getItem(key); return raw ? JSON.parse(raw) : structuredClone(fallback); }
   catch { return structuredClone(fallback); }
 }
+
+function applyMigrations() {
+  // Keep existing user data while bringing important COLORA defaults forward.
+  if (!settings || typeof settings !== 'object') settings = structuredClone(BRAND_DEFAULTS);
+  if (!settings.tagline || /LIBERT/i.test(settings.tagline)) {
+    settings.tagline = 'COLORA - COLOR YOUR AURA';
+  }
+  if (!Array.isArray(roles)) roles = structuredClone(seedRoles);
+  const cxTemplate = seedRoles.find(r => r.title === 'Customer Experience Executive');
+  const cxIndex = roles.findIndex(r => (r.title || '').trim().toLowerCase() === 'customer experience executive');
+  if (cxIndex === -1 && cxTemplate) {
+    roles.push(structuredClone(cxTemplate));
+  } else if (cxIndex >= 0 && cxTemplate) {
+    const existing = roles[cxIndex];
+    const looksLikePreviousDefault = existing.reportsTo === 'Operations / E-commerce Manager hoặc Founder' &&
+      Array.isArray(existing.responsibilities) && existing.responsibilities.length === 6 &&
+      Array.isArray(existing.kpis) && existing.kpis.length === 3;
+    if (looksLikePreviousDefault) {
+      roles[cxIndex] = {
+        ...structuredClone(cxTemplate),
+        id: existing.id,
+        location: existing.location || '',
+        employmentType: existing.employmentType || ''
+      };
+    }
+  }
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(roles));
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+  } catch {}
+}
 function persist() {
-  els.saveStatus.textContent = 'Đang lưu…';
+  els.saveStatus.innerHTML = '<span class="save-dot"></span>Đang lưu…';
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(roles));
     localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
-    els.saveStatus.textContent = 'Đã lưu';
+    els.saveStatus.innerHTML = '<span class="save-dot"></span>Đã lưu';
   }, 180);
 }
 function activeRole() { return roles.find(r => r.id === activeId); }
@@ -185,6 +219,8 @@ function fmtDate(iso) { try { return new Date(iso).toLocaleDateString('vi-VN'); 
 
 function renderRoleList(filter='') {
   const q = filter.trim().toLowerCase();
+  const roleCount = document.getElementById('roleCount');
+  if (roleCount) roleCount.textContent = `${roles.length} JD`; 
   const filtered = roles.filter(r => `${r.title} ${r.department}`.toLowerCase().includes(q));
   els.roleList.innerHTML = filtered.map(r => `
     <button class="role-item ${r.id===activeId?'active':''}" data-role-id="${r.id}">
@@ -289,11 +325,14 @@ function renderPreview() {
   const type = r.employmentType || settings.employmentType;
   els.printSheet.innerHTML = `
     <header class="jd-topband">
-      <div>
+      <div class="jd-title-wrap">
         <div class="jd-doc-label">${esc(settings.companyName)} — Job Description</div>
         <h2 class="jd-title">${esc(r.title)}</h2>
+        <div class="jd-tagline">${esc(settings.tagline)}</div>
       </div>
-      <img class="jd-logo" src="assets/colora-symbol-cream.png" alt="COLORA symbol" />
+      <div class="jd-logo-wrap">
+        <img class="jd-logo" src="assets/colora-logo-cream-transparent.png" alt="COLORA full logo" />
+      </div>
     </header>
     <div class="jd-body">
       <div class="jd-meta-grid">
@@ -323,7 +362,7 @@ function renderPreview() {
       ${section('About COLORA', `<div class="jd-copy">${esc(settings.hiringPromise)}</div><div class="jd-brand-story">${esc(settings.brandStory)}</div>`)}
 
       <footer class="jd-footer">
-        <div><strong>${esc(settings.companyName)} — ${esc(settings.tagline)}</strong><br>${esc(settings.footerNote)}</div>
+        <div><strong>${esc(settings.tagline)}</strong><br>${esc(settings.footerNote)}</div>
         <div style="text-align:right">${esc(settings.website)}<br>${esc(settings.applyEmail)}</div>
       </footer>
     </div>`;
@@ -371,7 +410,7 @@ function importJSON(file) {
   reader.onload = () => {
     try {
       const data = JSON.parse(reader.result); if (!Array.isArray(data.roles)) throw new Error('Invalid format');
-      roles = data.roles; settings = {...BRAND_DEFAULTS, ...(data.settings||{})}; activeId = roles[0]?.id || null; persist(); renderAll(); alert('Đã nhập dữ liệu JD.');
+      roles = data.roles; settings = {...BRAND_DEFAULTS, ...(data.settings||{})}; applyMigrations(); activeId = roles[0]?.id || null; persist(); renderAll(); alert('Đã nhập dữ liệu JD.');
     } catch { alert('File JSON không đúng định dạng COLORA JD Library.'); }
   };
   reader.readAsText(file);
