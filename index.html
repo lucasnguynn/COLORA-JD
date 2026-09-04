@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#002451" />
+  <title>COLORA — JD Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar no-print">
+      <div class="brand-block">
+        <img src="assets/colora-logo-cream.png" class="brand-logo" alt="COLORA" />
+        <div class="brand-kicker">JD LIBRARY</div>
+      </div>
+
+      <div class="sidebar-actions">
+        <button class="btn btn-accent btn-block" id="newRoleBtn">+ Tạo vị trí mới</button>
+        <div class="search-wrap">
+          <input id="roleSearch" type="search" placeholder="Tìm vị trí..." autocomplete="off" />
+        </div>
+      </div>
+
+      <div class="role-list" id="roleList"></div>
+
+      <div class="sidebar-footer">
+        <button class="btn btn-ghost btn-block" id="settingsBtn">Brand settings</button>
+        <button class="btn btn-ghost btn-block" id="exportDataBtn">Xuất dữ liệu JSON</button>
+        <label class="btn btn-ghost btn-block file-btn">Nhập dữ liệu JSON<input type="file" id="importDataInput" accept="application/json" hidden /></label>
+        <div class="local-note">Dữ liệu được tự động lưu trên trình duyệt này.</div>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar no-print">
+        <div>
+          <div class="eyebrow">COLORA PEOPLE & CULTURE</div>
+          <h1 id="workspaceTitle">Job Description Builder</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn btn-secondary" id="duplicateBtn">Nhân bản</button>
+          <button class="btn btn-danger-ghost" id="deleteBtn">Xóa</button>
+          <button class="btn btn-primary" id="printBtn">Xuất PDF</button>
+        </div>
+      </header>
+
+      <div class="toolbar no-print">
+        <div class="segmented" role="tablist" aria-label="Chế độ">
+          <button class="seg-btn active" data-mode="edit">Chỉnh sửa</button>
+          <button class="seg-btn" data-mode="preview">Xem bản JD</button>
+        </div>
+        <div class="autosave" id="saveStatus">Đã lưu</div>
+      </div>
+
+      <section class="editor-layout">
+        <div class="editor-panel no-print" id="editorPanel"></div>
+        <div class="preview-panel" id="previewPanel">
+          <article class="print-sheet" id="printSheet"></article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop no-print" id="settingsModal" hidden>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <div class="eyebrow">COLORA</div>
+          <h2>Brand & tuyển dụng settings</h2>
+        </div>
+        <button class="icon-btn" id="closeSettingsBtn" aria-label="Đóng">×</button>
+      </div>
+      <div id="settingsForm" class="modal-body"></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="resetBrandBtn">Khôi phục mặc định</button>
+        <button class="btn btn-primary" id="saveSettingsBtn">Lưu settings</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
