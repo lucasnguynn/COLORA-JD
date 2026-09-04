@@ -31,3 +31,9 @@ Sau đó mở `http://localhost:8080`.
 Phiên bản này là V1 không cần backend. Dữ liệu JD nằm trên chính trình duyệt đang dùng. Hãy dùng **Xuất dữ liệu JSON** để backup định kỳ.
 
 Nếu cần nhiều nhân sự cùng dùng / đăng nhập / đồng bộ cloud, bước tiếp theo nên chuyển storage sang Supabase/PostgreSQL và thêm authentication + role-based access.
+
+## V2 visual update
+- Slogan mặc định: **COLORA - COLOR YOUR AURA**.
+- Full COLORA logo được dùng với nền trong suốt và khoảng thở an toàn để tránh bị crop.
+- Có sẵn JD **Customer Experience Executive** theo mô hình D2C jewelry startup, bao gồm customer service, online sales, order support, after-sales, CRM, Voice of Customer và process improvement.
+- Giao diện editor / preview được refined theo hướng premium, editorial và dễ scan hơn.
