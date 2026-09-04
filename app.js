@@ -3,9 +3,9 @@ const SETTINGS_KEY = 'colora_jd_settings_v1';
 
 const BRAND_DEFAULTS = {
   companyName: 'COLORA',
-  tagline: 'AURA LIBERTÉ',
-  brandStory: 'COLORA là sự kết hợp giữa COLOR — màu sắc, hành động tô vẽ — và AURA — khí chất, năng lượng, bản sắc cá nhân. Mỗi người có một màu sắc và khí chất riêng; COLORA tồn tại để giúp họ thể hiện màu sắc ấy theo cách riêng của mình.',
-  hiringPromise: 'Nhiều ownership hơn — trải nghiệm rộng hơn — tốc độ học nhanh hơn. Là một thương hiệu D2C đang phát triển, mỗi vai trò tại COLORA có phạm vi rộng và cơ hội tiếp xúc với nhiều phần của doanh nghiệp. Bạn không cần biết mọi thứ từ ngày đầu; chúng tôi coi trọng khả năng học hỏi, sự chủ động và tiềm năng phát triển.',
+  tagline: 'COLORA YOUR AURA',
+  brandStory: 'COLORA là sự kết hợp giữa COLOR - màu sắc, hành động tô vẽ - và AURA - khí chất, năng lượng, bản sắc cá nhân. Mỗi người có một màu sắc và khí chất riêng; COLORA tồn tại để giúp họ thể hiện màu sắc ấy theo cách riêng của mình.',
+  hiringPromise: 'Nhiều ownership hơn - trải nghiệm rộng hơn — tốc độ học nhanh hơn. Là một thương hiệu D2C đang phát triển, mỗi vai trò tại COLORA có phạm vi rộng và cơ hội tiếp xúc với nhiều phần của doanh nghiệp. Bạn không cần biết mọi thứ từ ngày đầu; chúng tôi coi trọng khả năng học hỏi, sự chủ động và tiềm năng phát triển.',
   location: 'Việt Nam',
   workMode: 'On-site / Hybrid tùy vị trí',
   employmentType: 'Full-time',
