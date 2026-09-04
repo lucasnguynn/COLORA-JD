@@ -241,21 +241,211 @@ select,
   }
 }
 
+/* ===== ONE-PAGE A4 EXPORT =====
+   Print-only editorial compression. The browser preview can stay comfortable,
+   while exported PDFs use a denser two-column booklet composition.
+*/
 @media print {
+  .print-sheet {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: 297mm !important;
+    overflow: hidden !important;
+  }
+
   .jd-topband {
-    min-height: 46mm !important;
-    padding: 7.5mm 14mm 7mm !important;
+    min-height: 38mm !important;
+    height: 38mm !important;
+    padding: 5.5mm 12mm 5mm !important;
+  }
+
+  .jd-topband::before {
+    background:
+      linear-gradient(90deg, rgba(176,138,91,.36) 0 1px, transparent 1px) 12mm 5.5mm / 1px calc(100% - 11mm) no-repeat !important;
+  }
+
+  .jd-topband::after {
+    width: 45mm !important;
+    height: 45mm !important;
+    right: -4mm !important;
+    top: -3mm !important;
+  }
+
+  .jd-title-wrap {
+    padding-left: 5mm !important;
   }
 
   .jd-logo-wrap {
     position: absolute !important;
-    top: 6mm !important;
-    right: 13mm !important;
+    top: 4.5mm !important;
+    right: 11mm !important;
+    width: 25mm !important;
+    height: 13mm !important;
   }
 
-  .jd-title,
-  .jd-section-title,
-  .jd-callout-title {
+  .jd-doc-label {
+    margin-bottom: 1.3mm !important;
+    font-size: 5.5px !important;
+  }
+
+  .jd-title {
+    max-width: 138mm !important;
     font-family: var(--brand-heading) !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+
+  .jd-tagline {
+    margin-top: 1.7mm !important;
+    font-size: 5.4px !important;
+  }
+
+  /* Two-column editorial flow after the opening information. */
+  .jd-body {
+    height: 259mm !important;
+    padding: 5mm 11mm 6mm !important;
+    column-count: 2 !important;
+    column-gap: 7mm !important;
+    column-fill: balance !important;
+    column-rule: 1px solid rgba(0,36,81,.08) !important;
+    overflow: hidden !important;
+  }
+
+  /* Opening metadata and role statement remain full width for hierarchy. */
+  .jd-meta-grid,
+  .jd-intro {
+    column-span: all !important;
+  }
+
+  .jd-meta-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2.2mm 4mm !important;
+    margin-bottom: 3.8mm !important;
+  }
+
+  .jd-meta {
+    padding-top: 1.3mm !important;
+  }
+
+  .jd-meta-label {
+    font-size: 5.2px !important;
+    line-height: 1.12 !important;
+  }
+
+  .jd-meta-value {
+    margin-top: .7mm !important;
+    font-size: 6.8px !important;
+    line-height: 1.24 !important;
+  }
+
+  .jd-intro {
+    max-width: none !important;
+    margin: 0 0 4.2mm !important;
+    padding-left: 4mm !important;
+    font-size: 8.6px !important;
+    line-height: 1.52 !important;
+    font-weight: 400 !important;
+  }
+
+  /* Sections flow as self-contained editorial blocks inside the two columns. */
+  .jd-section,
+  .jd-callout {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 4mm !important;
+    break-inside: avoid-column !important;
+    page-break-inside: avoid !important;
+  }
+
+  .jd-section-title {
+    display: grid !important;
+    grid-template-columns: 8mm 1fr !important;
+    gap: 2mm !important;
+    margin: 0 0 2.2mm !important;
+    padding-top: 1.5mm !important;
+    font-family: var(--brand-heading) !important;
+    font-size: 12.5px !important;
+    line-height: 1.12 !important;
+  }
+
+  .jd-section-title::before {
+    font-size: 5.2px !important;
+  }
+
+  /* Undo nested multi-column grids; the outer editorial columns now do the work. */
+  .jd-body > .jd-section:nth-of-type(1),
+  .jd-body > .jd-section:nth-of-type(3),
+  .jd-two-col {
+    display: block !important;
+  }
+
+  .jd-subgroup {
+    margin: 0 0 2.6mm !important;
+    padding-right: 0 !important;
+    break-inside: avoid !important;
+  }
+
+  .jd-subhead {
+    margin-bottom: 1mm !important;
+    padding-bottom: .8mm !important;
+  }
+
+  .jd-subhead strong {
+    font-size: 7.3px !important;
+    line-height: 1.25 !important;
+  }
+
+  .jd-weight {
+    padding: .8mm 1.5mm !important;
+    font-size: 5.4px !important;
+  }
+
+  .jd-list {
+    padding-left: 3.2mm !important;
+  }
+
+  .jd-list li {
+    margin: .55mm 0 !important;
+    padding-left: .4mm !important;
+    font-size: 6.9px !important;
+    line-height: 1.38 !important;
+    orphans: 2 !important;
+    widows: 2 !important;
+  }
+
+  .jd-copy,
+  .jd-brand-story {
+    font-size: 6.9px !important;
+    line-height: 1.42 !important;
+  }
+
+  .jd-brand-story {
+    margin-top: 1.5mm !important;
+    padding-top: 1.5mm !important;
+  }
+
+  .jd-callout {
+    padding: 3.5mm 4mm !important;
+  }
+
+  .jd-callout-title {
+    margin-bottom: 1.2mm !important;
+    font-family: var(--brand-heading) !important;
+    font-size: 11.8px !important;
+    line-height: 1.14 !important;
+  }
+
+  .jd-callout .jd-copy {
+    font-size: 6.8px !important;
+    line-height: 1.4 !important;
+  }
+
+  .jd-footer {
+    column-span: all !important;
+    margin-top: 3mm !important;
+    padding-top: 2mm !important;
+    font-size: 5.8px !important;
+    line-height: 1.35 !important;
+    break-inside: avoid !important;
   }
 }
