@@ -1,12 +1,14 @@
 /* COLORA JD — typography + PDF spacing refinements
-   Loaded after luxury.css. Keep Vietnamese UI copy on Open Sans and compact the PDF masthead. */
+   Brand rule from guideline: Didot for headings, Open Sans for text.
+   Loaded after luxury.css so these rules intentionally take priority. */
 
 :root {
   --open-sans: "Open Sans", Arial, Helvetica, sans-serif;
+  --brand-heading: Didot, "Bodoni 72", "Bodoni MT", "Bodoni Moda", "Times New Roman", serif;
 }
 
-/* ===== EDITOR / APP UI =====
-   Open Sans has full Vietnamese coverage, so every editable/control surface uses it.
+/* ===== APP / EDITOR =====
+   Functional UI and all Vietnamese/body copy stay Open Sans for clean diacritics.
 */
 body,
 button,
@@ -28,12 +30,20 @@ select,
 .toolbar-note,
 .autosave,
 .btn,
-.preview-label,
-.topbar h1 {
+.preview-label {
   font-family: var(--open-sans) !important;
 }
 
-/* Keep a single, predictable hierarchy inside the editing column. */
+/* Brand-facing display title follows the guideline heading face. */
+.topbar h1 {
+  font-family: var(--brand-heading) !important;
+  font-size: 30px;
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -.018em;
+}
+
+/* Vietnamese functional heading remains Open Sans to avoid mixed-glyph fallback. */
 .form-card h3 {
   margin: 0 0 9px;
   font-family: var(--open-sans) !important;
@@ -42,6 +52,20 @@ select,
   font-weight: 600;
   letter-spacing: -0.012em;
   color: var(--navy);
+}
+
+/* The remaining English content-section headings can use the brand Didot treatment. */
+#editorPanel .form-card:nth-child(n+2) h3 {
+  font-family: var(--brand-heading) !important;
+  font-size: 17px;
+  line-height: 1.16;
+  font-weight: 400;
+  letter-spacing: -.014em;
+}
+
+.modal-header h2 {
+  font-family: var(--open-sans) !important;
+  font-weight: 600;
 }
 
 .field label {
@@ -79,7 +103,7 @@ select,
 }
 
 /* ===== PDF / LIVE PREVIEW =====
-   Reduce the oversized masthead while retaining the luxury editorial identity.
+   Compact masthead, with Didot reserved for display hierarchy and Open Sans for reading copy.
 */
 .jd-topband {
   min-height: 46mm;
@@ -118,19 +142,28 @@ select,
 
 .jd-doc-label {
   margin-bottom: 2mm;
+  font-family: var(--open-sans) !important;
   font-size: 6.1px;
+  line-height: 1.2;
+  font-weight: 700;
   letter-spacing: .22em;
 }
 
 .jd-title {
   max-width: 132mm;
-  font-size: 27px;
-  line-height: 1.04;
+  font-family: var(--brand-heading) !important;
+  font-size: 28px;
+  line-height: 1.03;
+  font-weight: 400;
+  letter-spacing: -.022em;
 }
 
 .jd-tagline {
   margin-top: 2.4mm;
+  font-family: var(--open-sans) !important;
   font-size: 6px;
+  line-height: 1.25;
+  font-weight: 700;
   letter-spacing: .215em;
 }
 
@@ -142,7 +175,7 @@ select,
   margin-bottom: 6mm;
 }
 
-/* Vietnamese narrative copy: use Open Sans to avoid fallback/diacritic mismatches. */
+/* Reading copy exactly follows the Open Sans text rule from the brand guideline. */
 .jd-intro,
 .jd-copy,
 .jd-brand-story,
@@ -164,11 +197,22 @@ select,
   letter-spacing: 0;
 }
 
-/* Keep display serif only for short editorial headings that are normally English. */
+/* Editorial heading hierarchy = Didot, matching the supplied COLORA guideline. */
 .jd-section-title,
-.jd-callout-title,
-.jd-title {
-  font-family: var(--editorial-serif);
+.jd-callout-title {
+  font-family: var(--brand-heading) !important;
+  font-weight: 400;
+  letter-spacing: -.014em;
+}
+
+.jd-section-title {
+  font-size: 16px;
+  line-height: 1.16;
+}
+
+.jd-callout-title {
+  font-size: 16px;
+  line-height: 1.22;
 }
 
 @media (max-width: 820px) {
@@ -207,5 +251,11 @@ select,
     position: absolute !important;
     top: 6mm !important;
     right: 13mm !important;
+  }
+
+  .jd-title,
+  .jd-section-title,
+  .jd-callout-title {
+    font-family: var(--brand-heading) !important;
   }
 }
